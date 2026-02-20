@@ -7,7 +7,7 @@
   "framework": "nextjs",
   "env": {
     "OPENAI_API_KEY": {
-      "description": "API key for OpenAI Whisper transcription service",
+      "description": "API key for OpenAI Whisper transcription service (optional)",
       "required": false
     }
   },
