@@ -1,0 +1,30 @@
+{
+  "name": "ytflow",
+  "version": 2,
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": "nextjs",
+  "env": {
+    "OPENAI_API_KEY": {
+      "description": "API key for OpenAI Whisper transcription service",
+      "required": false
+    }
+  },
+  "functions": {
+    "api/download/route.js": {
+      "maxDuration": 60,
+      "memory": 1024
+    },
+    "api/transcribe/route.js": {
+      "maxDuration": 300,
+      "memory": 3008
+    }
+  },
+  "regions": ["sfo1"],
+  "git": {
+    "deploymentEnabled": {
+      "main": true
+    }
+  }
+}
